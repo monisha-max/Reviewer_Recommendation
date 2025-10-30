@@ -24,22 +24,35 @@ This section outlines how to set up and run the application.
     streamlit run app.py
     ```
 
-3.  **Usage:** Upload a new paper's PDF through the web interface to instantly receive a list of **top-k recommended reviewers** along with transparent matching explanations.
+3.  **Usage:** Upload a new paper's PDF through the web interface to instantly receive a list of **top-k recommended reviewers** along with matching explanations.
 
 ---
 
-## Core Methodology and Techniques
 
-The system uses a robust ensemble of classical, deep learning, and structural features combined with advanced ranking fusion techniques.
+## NLP/ML techniques used 
 
-| Category | Techniques | Purpose |
-| :--- | :--- | :--- |
-| **Lexical & Topic** | TF-IDF, **BM25**, Jaccard, LDA, NMF | Measures **lexical overlap**; BM25 provides a strong probabilistic baseline; LDA/NMF extract subject matter. |
-| **Semantic Deep Learning** | S-BERT, SciBERT, E5 Embeddings (FAISS-Accelerated) | High-precision **semantic matching** and fast dense retrieval. |
-| **Verification & Reranking** | Cross-Encoder Reranker, WMD | Improves precision by **re-scoring** the top shortlist using joint attention and semantic word distance. |
-| **Impact & Structure** | Citation Metrics, Structural/Visual Features | Incorporates **scholarly influence** (H-index) and analysis of document structure and images. |
-| **Ensemble & Fusion** | Weighted Blend + **RRF** | Combines all signals for a multi-faceted score; Reciprocal Rank Fusion (RRF) adds a consensus boost across rankings. |
-| **Visual** | pHash, SSIM |
+Text-based
+- TF‑IDF + Cosine: lexical similarity
+- BM25: probabilistic term relevance baseline
+- Jaccard (bigrams): token overlap
+- Keyword matching: keyword overlap
+- WMD (true/fallback): semantic distance over word embeddings
+
+Topic/Embeddings
+- LDA, NMF: topic distributions
+- Sentence‑BERT, SciBERT, E5: dense semantic embeddings (FAISS‑accelerated)
+- Cross‑Encoder reranker: reranks top candidates with joint attention
+
+Structure/Visual/Citations
+- Structural similarity: section/paragraph/list/citation/table/figure features
+- Visual similarity (images): image extraction + pHash + SSIM
+- Visual similarity (text): fallback via textual visual markers
+- Citation impact: h‑index and citation counts (cached)
+
+Ensemble
+- Weighted blend of all signals; Reciprocal Rank Fusion (RRF) adds a small consensus boost across method rankings.
+- Optional per‑paper drill‑down for shortlisted authors (shows “Best Matching Paper”).
+
 ---
 
 ## Project File Structure
@@ -64,7 +77,7 @@ The system uses a robust ensemble of classical, deep learning, and structural fe
 
 ---
 
-## Team & Attribution
+## Team Members
 
 | Name | Roll Number |
 | :--- | :--- |
@@ -74,8 +87,6 @@ The system uses a robust ensemble of classical, deep learning, and structural fe
 | **Kuruva Bhuvana Vijaya** | SE22UARI080 |
 
 ---
-
-## Key Features and Reliability
 
 ### And other elements included
 
