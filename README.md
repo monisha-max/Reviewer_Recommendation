@@ -22,9 +22,6 @@ Source (src/)
 
 ## 2) How to set up
 
-1. Place data
-- Put all author folders with PDFs in ./Dataset
-
 2. Install deps
 ```bash
 python3 -m pip install -r requirements.txt
@@ -60,17 +57,10 @@ Structure/Visual/Citations
 Ensemble
 - Weighted blend of all signals; Reciprocal Rank Fusion (RRF) adds a small consensus boost across method rankings.
 - Optional per‑paper drill‑down for shortlisted authors (shows “Best Matching Paper”).
-
-Notes on fusion
-- RRF is rank‑based (adds 1/(k+rank) per method; k≈60) and stabilizes cross‑method disagreements.
-- Recommended default weights: keep RRF modest (≈0.2–0.3), BM25 as the primary lexical baseline, embeddings (SciBERT/E5/SBERT) as primary semantic signals.
-
-That’s it. Run the app, upload a PDF, and read the explanations in the results panel.
  
 ## 4) Everything else we included (concise)
  
 - Reviewer–Reviewer Similarity: explore similar experts to any reviewer (useful for alternates/COI).
-- Strategy Comparison tab: per‑method scores for the top candidates, with method‑agreement summary.
 - Evaluation tab: upload ground‑truth JSON → compute Precision@K/Recall@K/NDCG/MRR and download a report.
 - Cross‑Encoder Reranker: improves precision by re‑scoring the shortlist with a cross‑encoder.
 - Per‑Paper Drill‑Down: for shortlisted authors, finds the best matching paper and shows it as evidence.
@@ -78,11 +68,4 @@ That’s it. Run the app, upload a PDF, and read the explanations in the results
 - FAISS Acceleration: fast dense retrieval for SciBERT/E5/SBERT; indices persist to disk.
 - Caching Everywhere: author profiles, classical models, advanced models, citation metrics, structural/visual (JSON/PKL/FAISS).
 - Async Warmup: structural/visual/citations load in the background so the UI is responsive immediately.
- 
-## 5) Fallbacks and reliability
- 
-- PDF Parsing: tries multiple extractors (PyPDF2, pdfplumber, Tika). Uses whichever succeeds first.
-- Visual Similarity: if no images are present or extraction fails, falls back to text‑derived visual markers.
-- Structural Similarity: if PDF layout isn’t available, falls back to text‑based structural heuristics.
-- FAISS/Model Loads: if FAISS or a model isn’t available, the system degrades to a safe, slower path.
-- Robust Caches: caches are validated on load; missing parts are rebuilt as needed.
+
