@@ -1,12 +1,16 @@
 # Reviewer Recommendation System
 
-**Project Goal:** To identify the **top-k relevant reviewers** for a submitted research paper by applying advanced Ensemble NLP techniques across a corpus of over 600 PDF papers authored by 70+ researchers.
+**Project Goal:** To identify the **top-k relevant reviewers** for a submitted research paper by applying advanced Ensemble NLP techniques across a corpus of over 700 PDF papers authored by 70+ researchers.
 
 ---
 
 ## Getting Started
 
 This section outlines how to set up and run the application.
+
+### Prerequisites
+
+1.  **Data Placement:** Put all author folders containing their PDFs in the `./Dataset` directory.
 
 ### Installation and Execution
 
@@ -75,22 +79,13 @@ The system uses a robust ensemble of classical, deep learning, and structural fe
 
 ## Key Features and Reliability
 
-### Advanced Features
+### And other elements included
 
 * **Per-Paper Drill-Down:** For shortlisted reviewers, the system identifies and displays their single **Best Matching Paper** as supporting evidence.
 * **Conflict-of-Interest (COI) Flagging:** Flags likely conflicts based on name or affiliation cues (does not influence the score).
 * **Reviewer–Reviewer Similarity:** Allows exploration of experts similar to a chosen reviewer, useful for finding alternates.
 * **Evaluation Tab:** Enables the computation and reporting of Precision@K, Recall@K, NDCG@K, and MRR using uploaded ground-truth JSON.
 
-### Reliability and Performance
-
-* **Robust Caching:** Extensive caching of profiles, models, metrics, and features (`JSON`/`PKL`/`FAISS`) ensures fast, repeatable performance.
-* **FAISS Acceleration:** Utilizes FAISS for persistent, fast dense retrieval (SciBERT/E5/SBERT).
-* **Async Warmup:** Structural, visual, and citation caches load **asynchronously** in the background to ensure immediate UI responsiveness.
-* **Graceful Fallbacks:** The system is designed to degrade gracefully:
-    * **PDF Parsing:** Tries a sequence of extractors (`PyPDF2`, `pdfplumber`, `Tika`) until one succeeds.
-    * **Visual/Structural:** If PDF layout or images are unavailable, the system falls back to text-derived structural heuristics or text-derived visual markers.
-    * **Model Loads:** If a FAISS index or advanced model fails to load, the system automatically defaults to a reliable, slower path.
 
 ## Visual Demonstration:
 ![WhatsApp Image 2025-10-30 at 20 28 01_06ff692e](https://github.com/user-attachments/assets/6fe193fe-d127-417d-ad1d-6e869b3bd539)
