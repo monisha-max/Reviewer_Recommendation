@@ -94,6 +94,7 @@ Ensemble
 * **Conflict-of-Interest (COI) Flagging:** Flags likely conflicts based on name or affiliation cues (does not influence the score).
 * **Reviewer–Reviewer Similarity:** Allows exploration of experts similar to a chosen reviewer, useful for finding alternates.
 * **Evaluation Tab:** Enables the computation and reporting of Precision@K, Recall@K, NDCG@K, and MRR using uploaded ground-truth JSON.
+* **FAISS Acceleration:** fast dense retrieval for SciBERT/E5/SBERT; indices persist to disk.
 
 
 ## Visual Demonstration:
