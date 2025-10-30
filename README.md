@@ -92,7 +92,7 @@ The system uses a robust ensemble of classical, deep learning, and structural fe
     * **Visual/Structural:** If PDF layout or images are unavailable, the system falls back to text-derived structural heuristics or text-derived visual markers.
     * **Model Loads:** If a FAISS index or advanced model fails to load, the system automatically defaults to a reliable, slower path.
 
-## Visual Demonstration
+## Visual Demonstration:
 ![WhatsApp Image 2025-10-30 at 20 28 01_06ff692e](https://github.com/user-attachments/assets/6fe193fe-d127-417d-ad1d-6e869b3bd539)
 ![WhatsApp Image 2025-10-30 at 20 30 18_93061d0c](https://github.com/user-attachments/assets/fa44617e-96e5-4e44-9928-d6c9f530f22a)
 ![WhatsApp Image 2025-10-30 at 20 30 34_6c1308ee](https://github.com/user-attachments/assets/86ec5de5-e95a-4c45-8a88-918d526704ff)
