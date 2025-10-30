@@ -39,7 +39,7 @@ The system uses a robust ensemble of classical, deep learning, and structural fe
 | **Verification & Reranking** | Cross-Encoder Reranker, WMD | Improves precision by **re-scoring** the top shortlist using joint attention and semantic word distance. |
 | **Impact & Structure** | Citation Metrics, Structural/Visual Features | Incorporates **scholarly influence** (H-index) and analysis of document structure and images. |
 | **Ensemble & Fusion** | Weighted Blend + **RRF** | Combines all signals for a multi-faceted score; Reciprocal Rank Fusion (RRF) adds a consensus boost across rankings. |
-
+| **Visual** | pHash, SSIM |
 ---
 
 ## Project File Structure
