@@ -73,7 +73,7 @@ Ensemble
 | `src/visual_similarity.py` | Handles image extraction, pHash, and SSIM-based visual similarity. |
 | `src/citation_metrics.py` | Calculates and caches citation-based metrics (H-index). |
 | `src/reviewer_recommender.py` | The **main engine** for initialization, ensemble scoring, and drill-down. |
-| `src/evaluator.py` | *(Optional)* Implements evaluation metrics: Precision@K, Recall@K, NDCG@K, MRR. |
+| `src/evaluator.py` | Implements evaluation metrics: Precision@K, Recall@K, NDCG@K, MRR. |
 
 ---
 
