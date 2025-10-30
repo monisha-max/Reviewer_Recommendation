@@ -10,8 +10,6 @@ This section outlines how to set up and run the application.
 
 ### Prerequisites
 
-1.  **Data Placement:** Put all author folders containing their PDFs in the `./Dataset` directory.
-
 ### Installation and Execution
 
 1.  **Install Dependencies:** Install all required Python packages from `requirements.txt`.
