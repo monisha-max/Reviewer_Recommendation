@@ -1,0 +1,54 @@
+# Core PDF Processing
+PyPDF2==3.0.1
+pdfplumber==0.10.3
+tika==2.6.0
+
+# NLP and Text Processing
+nltk==3.8.1
+scikit-learn==1.3.2
+gensim==4.3.2
+spacy==3.7.2
+
+# Advanced NLP Models
+sentence-transformers==2.7.0
+transformers==4.40.0
+torch==2.1.1
+pyemd==0.5.1
+onnxruntime==1.18.0
+
+# Topic Modeling
+pyLDAvis==3.4.1
+
+# Data Processing
+numpy==1.25.2
+pandas==2.0.3
+scipy==1.11.4
+
+# Visualization and UI
+streamlit==1.28.2
+plotly==5.18.0
+matplotlib==3.8.2
+seaborn==0.13.0
+
+# Progress bars
+tqdm==4.66.1
+
+# Utilities
+python-dotenv==1.0.0
+joblib==1.3.2
+
+# Advanced Features
+imagehash==4.3.1
+requests==2.31.0
+Pillow==10.1.0
+PyMuPDF==1.23.7
+pdf2image==1.17.0
+pytesseract==0.3.10
+scikit-image==0.22.0
+
+# Vector Storage (FAISS)
+faiss-cpu==1.8.0
+
+# Lexical Retrieval
+rank-bm25==0.2.2
+
