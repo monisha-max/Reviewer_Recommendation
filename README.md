@@ -1,6 +1,6 @@
 # Reviewer Recommendation System
 
-**Project Goal:** To identify the **top-k relevant reviewers** for a submitted research paper by applying advanced Ensemble NLP techniques across a corpus of over 700 PDF papers authored by 70+ researchers.
+**Project Goal:** To identify the **top-k relevant reviewers** for a submitted research paper by applying advanced Ensemble NLP techniques across a corpus of over 600 PDF papers authored by 70+ researchers.
 
 ---
 
